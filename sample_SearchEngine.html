@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf8">
+    <title>SearchEngineまとめ</title>
+    <link rel="shortcut icon" href="/Users/nana/Desktop/nana/素材/sp_icon.png">
+  </head>
+  <body>
+    <article>
+      <h1>アンケート(選ぶものが隠してあるver)</h1>
+      <form action="survey.php" method="post">
+        <p>メールアドレス:<input type="text" name="email"></p>
+        <p>City:
+          <select name="city">
+            <option value="tokyo">Tokyo</option>
+            <option value="nagoya">Nagoya</option>
+            <option value="osaka">Osaka</option>
+            <option value="kyoto">Kyoto</option>
+            <option value="hirosima">Hirosima</option>
+            <option value="fukuoka">Fukuoka</option>
+          </select>
+        <p><input type="submit" value="送信！"></p>
+      </form>
+    </article>
+    <article>
+      <h1>アンケート</h1>
+      <form action="survey.php" method="post">
+        <p>メールアドレス:<input type="text" name="email"></p>
+        <p>City:
+          <!-- multipleの後ろにsize指定できる（sizeが書かれてなくてもOK） -->
+          <select name="city" multiple size="5">
+            <option value="tokyo">Tokyo</option>
+            <option value="nagoya">Nagoya</option>
+            <option value="osaka">Osaka</option>
+            <option value="kyoto">Kyoto</option>
+            <option value="hirosima"selected>Hirosima</option>
+            <option value="fukuoka">Fukuoka</option>
+          </select>
+        <p><input type="submit" value="送信！"></p>
+          </form>
+    </article>
+    <article>
+      <h1>アンケート</h1>
+      <form action="survey.php" method="post">
+        <!-- required = 入力されてなかったら送信時にエラーを表示
+        novalidate　＝　入力がなくても送信できる
+        優先されるのはnovalidat-->
+        <p>メールアドレス:<input type="email" name="email"required></p>
+        <p>料金: <input type="number" name="price"></p>
+        <p>誕生日:<input type="date" name="birthday"></p>
+        <p><input type="submit" value="送信！"></p>
+      </form>
+    </article>
+    <article>
+      <h1>アンケート(メールアドレスやパスワードを入力する場所の色々)</h1>
+      <form action="survey.php" method="post">
+        <p>メールアドレス:<input type="text" name="email"></p>
+        <p><input type="submit" value="送信！"></p>
+        <p>メールアドレス:<input type="text" name="email" size="50" maxlength="5" value="abc"></p>
+        <p><input type="submit" value="送信！"></p>
+        <p>メールアドレス:<input type="text" name="email" size="50" maxlength="5" placeholder="please enter email"></p>
+        <p><input type="submit" value="送信！"></p>
+        <p>ログイン:<input type="password" name="password"></p>
+        <input type="hidden" name="user_id" value="23423">
+        <p><input type="submit" value="送信！"></p>
+    </article>
+    <article>
+      <form action="survey.php" method="post">
+          <h1>アンケート(コメント入力フォーム例＆送信ボタンの色々)</h1>
+            <p>
+                コメント：
+                <textarea name="comment" cols="40" rows="5">コメント</textarea>
+            </p>
+            <p><button type="submit"<strong>送信！</strong></button></p>
+            <p><button type="button"<strong>処理をする（JavaScript)</strong></button></p>
+            <p><input type="submit" value="送信！"disabled></p>
+      </form>
+    </article>
+    <article>
+      <form action="survey.php" method="post">
+        <p>アンケート(選択の表示の仕方のいろいろ)</p>
+        <p>
+          Phone:
+          <label><input type="checkbox" name="phone" value="android">android</label>
+          <input type="checkbox" name="phone" value="iphone" id="iphone"><label for="iphone">iPhone</label>
+        </p>
+        <p><input type="submit" value="送信！"></p>
+
+        <p>
+          Phone:
+          <input type="checkbox" name="phone" value="android" checked>android
+          <input type="checkbox" name="phone" value="iPhone">iPhone
+        </p>
+        <p><input type="submit" value="送信！"></p>
+
+        <p>
+          Color:
+          <input type="radio" name="color" value="Red">Red
+          <input type="radio" name="color" value="Blue">Blue
+        </p>
+        <p><input type="submit" value="送信！"></p>
+      </form>
+    </article>
+  </body>
+</html>
